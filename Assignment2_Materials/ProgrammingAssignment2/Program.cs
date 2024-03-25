@@ -22,8 +22,11 @@ namespace ProgrammingAssignment2
 		/// <param name="args">command-line args</param>
 		static void Main(string[] args)
 		{
-			// loop while there's more input
-			string input = Console.ReadLine();
+			// ask user 
+            Console.WriteLine("Enter numbers for calculation ");
+
+            // loop while there's more input
+            string input = Console.ReadLine();
 			while (input[0] != 'q')
 			{
 				// extract input values from string
@@ -34,7 +37,28 @@ namespace ProgrammingAssignment2
 				// course add more space between the
 				// comments as needed
 
+				// Data types 
+				int value = GetValue();
+				int count = 0;
+				int sum = 0;
+				float mean =0;
 
+                // add numbers 
+                while (value != -1) 
+				{
+					
+					count++;
+					sum = value+ sum;
+					value = GetValue();
+				}
+				// check if count is more than 0
+				if (count > 0) 
+				{
+                    // divide numbers
+                    mean = (float)sum / count;
+				}
+				// print answer 
+				Console.WriteLine("count is: " + count + " mean is: " + mean);
 
 				// Don't add or modify any code below
 				// this comment
