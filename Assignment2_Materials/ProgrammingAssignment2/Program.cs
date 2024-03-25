@@ -46,13 +46,15 @@ namespace ProgrammingAssignment2
                 // add numbers 
                 while (value != -1) 
 				{
+					
 					count++;
 					sum = value+ sum;
 					value = GetValue();
 				}
-				// divide numbers 
+				// check if count is more than 0
 				if (count > 0) 
 				{
+                    // divide numbers
                     mean = (float)sum / count;
 				}
 				// print answer 
